@@ -21,7 +21,7 @@ async function obterDadosDoCep() {
             const resposta = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
             const dados = await resposta.json()
 
-            return dados.erro ? p.textContent = 'Cep invaĺido' : p.innerHTML = `<ul>
+            return dados.erro ? p.textContent = 'Cep inválido' : p.innerHTML = `<ul>
             <li>Cep: ${dados.cep}</li>
             <li>Rua: ${dados.logradouro}</li>
             <li>Bairro: ${dados.bairro}</li>
